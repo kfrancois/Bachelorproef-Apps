@@ -40,7 +40,7 @@ export default class App extends Component {
                 ? `Result calculated in:`
                 : 'No result yet'}
           </Text>
-          {time &&
+          {!!time &&
             !isCalculating && <Text style={styles.result}>{time} ms</Text>}
         </View>
       </SafeAreaView>
@@ -60,7 +60,6 @@ export default class App extends Component {
     for (let i = 0; i < 30000; i++) {
       result = await Math.pow(549413, 3440);
     }
-    result = Math.pow(549413, 3);
     return result;
   };
 
